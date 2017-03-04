@@ -29,12 +29,24 @@ install the versions of ``zc.buildout`` and ``setuptools`` you need
 .. code:: sh
 
    $ env/bin/pip install -r requirements.txt
+   
+In Windows some version of python creates the Script folder instead of bin folder. In that case
+   
+.. code:: sh
+
+   $ env/Scripts/pip install -r requirements.txt
 
 To create an instance, run
 
 .. code:: sh
 
    $ env/bin/buildout
+
+In case of Scripts folder
+
+.. code:: sh
+
+ $ env/Scripts/buildout
 
 Do not be alarmed if you see the following
 
