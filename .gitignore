@@ -14,3 +14,4 @@ tags
 .mr.developer.cfg
 buildout.cfg
 IGNORE.txt
+docs/_build
