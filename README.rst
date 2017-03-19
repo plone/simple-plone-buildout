@@ -2,9 +2,30 @@
 Using the Simple Plone Buildout
 ===============================
  
-`Windows users, click this link to get started <#using-windows>`_
+This is a method for installing Plone on all platforms that run Python, including Windows.
 
-Get started by cloning this repository
+For the complete list of Plone installation methods, see https://plone.org/download
+
+.. contents:: 
+
+Requirements
+============
+
+`For Windows, click this link to install the software required by Plone <#installing-required-software-for-windows>`_
+
+For all other platforms, you will require:
+
+- Python 2.7
+- Git
+- a compiler, usually GCC
+
+Installation Steps
+==================
+
+1. Clone the repository
+-----------------------
+
+Get started by cloning this repository:
 
 .. code:: sh
 
@@ -16,9 +37,12 @@ On Windows:
 
   C:\Users\foo> git clone https://github.com/plone/simple-plone-buildout
 
-First, copy the ``buildout.cfg_tmpl`` into the buildout root. The 
+2. Select a configuration
+-------------------------
+
+Copy the ``buildout.cfg_tmpl`` into the buildout root. The 
 ``profiles/testing.cfg`` profile is active by default, but you can use any of
-the others. See descriptions below.
+the others (see the `possible buildout configurations below <#extending-buildout-configs>`_):
 
 .. code:: sh
 
@@ -32,7 +56,10 @@ On Windows:
   C:\Users\foo> cd simple-plone-buildout
   C:\Users\foo\simple-plone-buildout> copy profiles\buildout.cfg.tmpl buildout.cfg
 
-Then you need to run::
+3. Create a Python virtual environment
+--------------------------------------
+
+Create a Python virtual environment ("sandbox") in a directory named `env`, to avoid affecting your system Python::
 
  $ virtualenv env
  
@@ -42,18 +69,23 @@ On Windows:
 
   C:\Users\foo\simple-plone-buildout> virtualenv env
 
-This will create an env directory with a virtual environment. You should then
-install the versions of ``zc.buildout`` and ``setuptools`` you need
+4. Install buildout and setuptools
+----------------------------------
+
+Install the versions of ``zc.buildout`` and ``setuptools`` you will need:
 
 .. code:: sh
 
    $ env/bin/pip install -r requirements.txt
 
-On Windows, use the ``Scripts`` directory instead of ``bin``:
+On Windows, the executable for `pip.exe` is in the ``Scripts`` directory, instead of ``bin``:
 
 .. code:: bat
 
   C:\Users\foo\simple-plone-buildout> env\Scripts\pip install -r requirements.txt
+
+5. Run buildout
+---------------
 
 To create an instance, run
 
@@ -77,6 +109,9 @@ Do not be alarmed if you see the following
 
 This will download Plone's eggs and modules for you, as well as other 
 dependencies and create a new Plone instance.
+
+6. Start Plone
+--------------
 
 You can start your Plone instance by running
 
@@ -102,10 +137,8 @@ On Windows:
 
     C:\Users\foo\simple-plone-buildout> bin\instance start
 
-
-
-Enjoy!
-------
+7. Enjoy!
+---------
 
 Navigate your browser to `<http://localhost:8080>`_
 
@@ -113,7 +146,7 @@ The initial user is **admin** with **admin** as the password.
  
 
 Working with buildout.cfg
--------------------------
+=========================
 
 You can change any option in ``base.cfg`` and re-run ``env/bin/buildout`` to reflect
 the changes. This may delete things inside the ``parts`` directory, but should
@@ -128,7 +161,7 @@ versions online
    $ env/bin/buildout -Nv
 
 Extending buildout configs
---------------------------
+==========================
 
 This buildout makes use of the 'extends' functionality of buildout.  The
 buildout.cfg contains only minimal information.  Here are what the rest of the
@@ -158,11 +191,11 @@ debug.cfg
   The debug config also contains a way to 'refresh' your product in
   plone.reload.  You can access it like this::
 
-    http://<plone_host>:<plone_port>/@@reload
+    http://localhost:8080/@@reload
 
   And also a way of recording doctests::
 
-    http://<plone_host>:<plone_port>/++resource++recorder/index.html
+    http://localhost:8080/++resource++recorder/index.html
 
   Take a look at the config to see what other tools are available.
 
@@ -187,9 +220,9 @@ prod.cfg
   sizes, set up pound, squid, nginx, etc.  This will be the config used to run
   the site in production mode.
 
-=============
-Using Windows
-=============
+========================================
+Installing Required Software for Windows
+========================================
 
 Download and run the following installers.
 
@@ -198,7 +231,11 @@ Download and run the following installers.
   * You may choose either "Install for all users" or "Install just for me" (both work). On the installer's "Customize Python 2.7.13 (64-bit)" page, scroll down and click on the option to "Add python.exe to Path".
   * After installing, make sure ``python.exe`` is in your PATH. To test if it is in your PATH, type "python" and hit Return; if you see a message ``'python' is not recognized as an internal or external command, operable program or batch file`` then it is not in your PATH and you may have to restart Windows, or you can add it to your PATH manually with the command ``PATH=$PATH;c:\Python27``.
 
-.. image:: https://raw.githubusercontent.com/plone/simple-plone-buildout/master/docs/customize-python-setup-add-to-path.jpg
+.. figure:: https://raw.githubusercontent.com/plone/simple-plone-buildout/master/docs/customize-python-setup-add-to-path.jpg
+  :width: 50 %
+  :align: center
+
+  Be sure to add python.exe to Path
 
 * `Microsoft Visual C++ Compiler for Python 2.7 <http://aka.ms/vcpython27>`_
 
