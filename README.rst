@@ -4,7 +4,10 @@ Plone Simple Buildout
 
 A basic, cross-platform `Plone <https://plone.org>`_ buildout.
 
-This installation method is simpler than the `Plone unified installer <https://github.com/plone/Installers-UnifiedInstaller>`_ for UNIX-based platforms, which automates the process of installing required software and setting up a virtual environment.
+Use this installation method if you are using Windows.
+
+For UNIX based operating systems the `Plone unified installer <https://github.com/plone/Installers-UnifiedInstaller>`_
+is the preferred method.
 
 **Disclaimer**
 
