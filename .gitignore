@@ -1,4 +1,4 @@
-# ignoring these files/dirs in the buildout
+# ignoring these files/dirs
 develop-eggs
 fake-eggs
 eggs
@@ -14,3 +14,4 @@ tags
 .mr.developer.cfg
 buildout.cfg
 IGNORE.txt
+docs/_build
