@@ -1,5 +1,5 @@
 ======================
-Plone Example Buildout
+Plone Simple Buildout
 ======================
 
 A basic, cross-platform `Plone <https://plone.org>`_ buildout.
@@ -8,13 +8,13 @@ A basic, cross-platform `Plone <https://plone.org>`_ buildout.
 
 Please **do not** misread **simple** or **basic** as **easy** !
 
-If you are new to `Plone <https://plone.org>`_, please read our documentation about
+If you are new to `Plone <https://plone.org>`_ (see `an overview of Plone <https://plone.com>`_), please read our documentation about
 `installing Plone <https://docs.plone.org/manage/installing/installation.html>`_ first !
 
 Features
 ========
 
-Cross-platform
+This installation method is cross-platform:
 
 - UNIX based operating systems
 - Windows
@@ -33,7 +33,7 @@ Contribute
 Support
 =======
 
-If you are having issues, please let us know.
+If you run into problems, please let us know by filing an issue in the tracker.
 
 License
 -------
