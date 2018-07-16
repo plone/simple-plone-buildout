@@ -1,6 +1,13 @@
 Changelog
 =========
 
+5.1.x unreleased
+----------------
+
+- New users have been having a hard time figuring out how to update this buildout.
+  Add sections for instance eggs, versions and sources to the buildout.cfg template.
+  Make it possible to easily update the Plone version.
+
 5.1.0 (2018-03-24)
 ------------------
 

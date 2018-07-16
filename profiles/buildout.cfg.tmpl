@@ -4,13 +4,71 @@
 # 
 #     $ cd path/to/your-buildout
 #     $ cp profiles/buildout.cfg_tmpl buildout.cfg
+#
+# On Windows, use "copy" for "cp" and "\" for "/".
+#
+# Once copied to the root, select the basic buildout scenario you need
+# (testing, production, staging) by uncommenting the appropriate line 
+# in the buildout:extends section below.
+# You may also set the Plone version by editing the URL at the top of the 
+# "extends" list.
+
 
 [buildout]
-index = https://pypi.python.org/simple/
-# Once copied to the root, select the environment you are releasing to
-# by uncommenting the appropriate line below.
 extends =
+# You may update the Plone version simply by changing the version part of this URL.
+    https://dist.plone.org/release/5.1.3-pending/versions.cfg
+
 #    profiles/local.cfg
     profiles/testing.cfg
 #    profiles/prod.cfg
 #    profiles/staging.cfg
+
+############################################
+# Eggs
+# ----
+# Add an indented line to the eggs section below for any Python
+# eggs or packages you wish to include in your Plone client instances.
+#
+# Note that versions may be specified here or in the [versions]
+# section below. You should always specify versions that you know
+# are compatible with the Plone release and at an acceptable
+# development level.
+#
+eggs =
+    Plone
+
+
+############################################
+# Versions Specification
+# ----------------------
+# Version information supplied here will "pin" Python packages to a particular
+# version number, even when you use the "newest" flag running buildout.
+# Specifying versions for all packages is a good idea and can prevent
+# accidental changes when you add new packages to your buildout.
+# Note that versions specified here will override those specified earlier
+# in the configuration, including those from the Plone and Zope version
+# config files.
+#
+[versions]
+# package.name = 1.0.5
+
+
+############################################
+# Sources
+# -------
+# Python packages are usually acquired from sources like the Python Package Index, PyPI.
+# Specify packages under development here -- ones not available from PyPI.
+#
+# See http://pypi.python.org/pypi/mr.developer for mr.developer source specifications.
+# <name> = <kind> [key=value] <url> [path] [key=value]
+# kind = The kind of repository. Currently supported are one of svn (>= 1.5), hg, git, cvs or fs.
+#
+[sources]
+# Examples: to check out plonetheme.sunburst from Plone's svn, use:
+# plonetheme.sunburst = svn https://svn.plone.org/svn/plone/plonetheme.sunburst/trunk
+#
+# To use a python package that is being developed in your src subdirectory, use:
+# myproduct.betterplone = fs myproduct.betterplone
+
+
