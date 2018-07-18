@@ -13,12 +13,15 @@
 # You may also set the Plone version by editing the URL at the top of the 
 # "extends" list.
 
+# This file uses the semi-standard "ini" file format: https://en.wikipedia.org/wiki/INI_file
+# Use "#" for comments. When in a value list, the comment character "#" must be in the first column.
+
 
 [buildout]
 extends =
 # You may update the Plone version simply by changing the version part of this URL.
     https://dist.plone.org/release/5.1.3-pending/versions.cfg
-
+# Uncomment one of the following configuration profiles to get some basics preset.
 #    profiles/local.cfg
     profiles/testing.cfg
 #    profiles/prod.cfg
@@ -37,6 +40,22 @@ extends =
 #
 eggs =
     Plone
+#    package.name
+
+
+###########################################
+# Environment variables
+# ----
+# These are used to fine-tune operations.
+environment-vars =
+# If you do not need translations, turn this off:
+    zope_i18n_compile_mo_files true
+# If you do need translations, you'll get faster startup by
+# specifying languages in use.
+#    zope_i18n_allowed_languages en es de fr
+# If you need to set a timezone other than that of the server,
+# do it in Plone, or here.
+#    TZ US/Eastern
 
 
 ############################################
