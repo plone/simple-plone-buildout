@@ -49,6 +49,8 @@ Create an instance:
 
    env/bin/buildout
 
+Expect buildout to take a very long time the first time you run it.
+It's fetching and compiling a large number of Python packages.
 
 **Do not** be alarmed if you see the following:
 

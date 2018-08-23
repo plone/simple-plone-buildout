@@ -86,7 +86,12 @@ Create an instance:
 
    C:\Users\foo\simple-plone-buildout> env\Scripts\buildout
 
-You may occasionally have buildout stop with "Access denied" messages. Just run it again. It looks like Windows 10 doesn't like it when a file is written, then rapidly renamed.
+Expect buildout to take a very long time the first time you run it.
+It's fetching and compiling a large number of Python packages.
+
+You may occasionally have buildout stop with "Access denied" messages.
+Just run it again.
+It looks like Windows 10 doesn't like it when a file is written, then rapidly renamed.
 
 Do not be alarmed if you see the following:
 
