@@ -22,10 +22,15 @@ extends =
 # You may update the Plone version simply by changing the version part of this URL.
     https://dist.plone.org/release/5.1.3-pending/versions.cfg
 # Uncomment one of the following configuration profiles to get some basics preset.
+# testing.cfg is for review of Plone operations in a simple configuration:
     profiles/testing.cfg
+# develop.cfg creates a full environment for Plone add-on development.
 #    profiles/develop.cfg
-#    profiles/prod.cfg
-#    profiles/staging.cfg
+
+#    There are several example profiles in the profiles/ directory that will give you
+#    a start on a production-level buildout.
+#    These generally require planning of your production stack.
+#    See https://docs.plone.org/manage for extensive documentation on production configuration.
 
 ############################################
 # Eggs
