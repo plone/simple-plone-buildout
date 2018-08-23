@@ -20,14 +20,14 @@ Get started by cloning this repository:
 
    git clone https://github.com/plone/simple-plone-buildout
 
-Copy the ``buildout.cfg_tmpl`` into the buildout root.
+Copy the ``buildout.cfg.tmpl`` to ``buildout.cfg``.
 
 The ``profiles/testing.cfg`` profile is active by default, but you can use any of the :doc:`others <working_with_buildout>`.
 
 .. code-block:: shell
 
    cd simple-plone-buildout
-   cp profiles/buildout.cfg.tmpl buildout.cfg
+   cp buildout.cfg.tmpl buildout.cfg
 
 Then you need to run
 

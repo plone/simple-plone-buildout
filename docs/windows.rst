@@ -58,7 +58,7 @@ Get started by cloning this repository.
 
    C:\Users\foo> git clone https://github.com/plone/simple-plone-buildout
 
-Copy the ``buildout.cfg_tmpl`` into the buildout root.
+Copy the ``buildout.cfg_tmpl`` to ``buildout.cfg``.
 
 The ``profiles/testing.cfg`` profile is active by default, but you can use any of the :doc:`others <working_with_buildout>`.
 
@@ -66,7 +66,7 @@ The ``profiles/testing.cfg`` profile is active by default, but you can use any o
 
    C:\Users\foo> cd simple-plone-buildout
 
-   C:\Users\foo\simple-plone-buildout> copy profiles\buildout.cfg.tmpl buildout.cfg
+   C:\Users\foo\simple-plone-buildout> copy buildout.cfg.tmpl buildout.cfg
 
 Create an *env* directory with a virtual environment:
 
@@ -86,7 +86,9 @@ Create an instance:
 
    C:\Users\foo\simple-plone-buildout> env\Scripts\buildout
 
-**Do not** be alarmed if you see the following:
+You may occasionally have buildout stop with "Access denied" messages. Just run it again. It looks like Windows 10 doesn't like it when a file is written, then rapidly renamed.
+
+Do not be alarmed if you see the following:
 
 .. code-block:: python
 
