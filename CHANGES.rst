@@ -4,7 +4,7 @@ Changelog
 5.1.5 (unreleased)
 ------------------
 
-- updated to use Plone 5.1.5, upgrade to trollius 2.2
+- updated to use Plone 5.1.5, upgrade trollius 2.2post1
   [tkimnguyen]
 
 5.1.0 (2018-03-24)
