@@ -7,6 +7,12 @@ Changelog
 - updated to Plone 5.2 on Python 3.6
   [cdw9, tkimnguyen]
 
+5.1.5 (unreleased)
+------------------
+
+- updated to use Plone 5.1.5, upgrade trollius 2.2post1
+  [tkimnguyen]
+
 5.1.0 (2018-03-24)
 ------------------
 
