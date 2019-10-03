@@ -1,6 +1,12 @@
 Changelog
 =========
 
+5.2.0 (2019-10-02)
+------------------
+
+- updated to Plone 5.2 on Python 3.6
+  [cdw9, tkimnguyen]
+
 5.1.5 (unreleased)
 ------------------
 
